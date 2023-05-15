@@ -30,7 +30,7 @@ async def post_to_discord_click():
                 message = await webhook.send(gradio_url, wait=True)
         else:
             message = await webhook.send(gradio_url, wait=True)
-        print("Gradio2Discord extension shared public Gradio URL to Discord")
+        print("gradio2discord extension shared public Gradio URL to Discord")
         await asyncio.sleep(1)  # Add a small delay here
         await write_file("previous_message_id.txt", message.id)
     await write_file("gradio_url.txt", gradio_url)
